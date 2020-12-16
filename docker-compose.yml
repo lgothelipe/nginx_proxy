@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  nginxproxy:
+    build: .
+    env_file: .env
+    image: nginxproxy:1.0
+    ports:
+      - "80:80"
+      - "443:443"
+    restart: always
